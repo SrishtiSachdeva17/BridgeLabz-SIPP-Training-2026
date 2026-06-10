@@ -2,15 +2,11 @@ import java.util.Scanner;
 
 public class LeapYearIfElse {
     public static void main(String[] args) {
-        // Create a Scanner Object to take input
         Scanner sc = new Scanner(System.in);
 
-        // Get the year input from the user
         int year = sc.nextInt();
 
-        // Check if year is in Gregorian calendar (year >= 1582)
         if (year >= 1582) {
-            // Check leap year conditions using nested if-else statements
             if (year % 4 == 0) {
                 if (year % 100 == 0) {
                     if (year % 400 == 0) {
@@ -25,11 +21,9 @@ public class LeapYearIfElse {
                 System.out.println(year + " is not a Leap Year");
             }
         } else {
-            // Print message if the year is before the Gregorian calendar start
             System.out.println("The year " + year + " is before the Gregorian calendar (1582).");
         }
 
-        // Close the Scanner Stream
         sc.close();
     }
 }
